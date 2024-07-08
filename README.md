@@ -14,7 +14,7 @@ sudo chown $USER /var/run/docker.sock
 ### 1.Clone the Repository:
 
 ```bash
-git clone https://github.com/LondheShubham153/TWSThreeTierAppChallenge
+git clone https://github.com/arfath29/Eks-3-tier-app
 cd TWSThreeTierAppChallenge/frontend
 ```
 ### 2.Create a Dockerfile for Frontend:
