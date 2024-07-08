@@ -96,6 +96,10 @@ chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin
 kubectl version --short --client
 ```
+```bash
+sudo chmod +x /usr/local/bin/kubectl
+
+```
 ### Install eksctl:
 
 ```bash
@@ -343,7 +347,11 @@ spec:
               value: "http://api:3500"
      
 ```
-### Create Frontend Service:
+### apply frontend-deploymrnt:
+```bash
+kubectl apply -f frontend-deployment
+
+```### Create Frontend Service:
 
 ```bash
 nano frontend-service.yml
@@ -374,13 +382,13 @@ kubectl apply -f frontend-service.yml
 curl -O https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.5.4/docs/install/iam_policy.json
 ```
 ```bash
-aws iam create-policy --policy-name AWSLoadBalancerControllerIAMPolicy --policy-document file://iam_policy.json
+aws iam create-policy --policy-name AWSLoadBalancerControllerIAMPolicyForEKS --policy-document file://iam_policy.json
 ```
 ```bash
 eksctl utils associate-iam-oidc-provider --region=us-west-2 --cluster=three-tier-cluster --approve
 ```
 ```bash
-eksctl create iamserviceaccount --cluster=three-tier-cluster --namespace=kube-system --name=aws-load-balancer-controller --role-name AmazonEKSLoadBalancerControllerRole --attach-policy-arn=arn:aws:iam::626072240565:policy/AWSLoadBalancerControllerIAMPolicy --approve --region=us-west-2
+eksctl create iamserviceaccount --cluster=three-tier-cluster --namespace=kube-system --name=aws-load-balancer-controller --role-name AmazonEKSLoadBalancerControllerRoleForEKS --attach-policy-arn=arn:aws:iam::626072240565:policy/AWSLoadBalancerControllerIAMPolicyForEKS --approve --region=us-west-2
 ```
 
 ## deploy aws load balancer controller:
@@ -393,13 +401,11 @@ helm repo add eks https://aws.github.io/eks-charts
 helm repo update eks
 ```
 ```bash
-helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system --set clusterName=my-cluster --set serviceAccount.create=false --set serviceAccount.name=aws-load-balancer-controller
+helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system --set clusterName=three-tier-cluster --set serviceAccount.create=false --set serviceAccount.name=aws-load-balancer-controller
 ```
 ```bash
 kubectl get deployment -n kube-system aws-load-balancer-controller
-kubectl apply -f full_stack_lb.yaml
 ```
-
 ## 11. Create Ingress for Routing
 ### Create Ingress Resource:
 
@@ -420,7 +426,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - host: backend.amanpathakdevops.study
+    - host: <public_ip>.nip.io
       http:
         paths:
           - path: /api
