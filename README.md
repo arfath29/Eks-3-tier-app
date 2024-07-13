@@ -345,13 +345,12 @@ spec:
           env:
             - name: REACT_APP_BACKEND_URL
               value: "http://api:3500"
-     
+### apply frontend-deploymrnt:  
 ```
-### apply frontend-deploymrnt:
 ```bash
 kubectl apply -f frontend-deployment
-
-```### Create Frontend Service:
+```
+### Create Frontend Service:
 
 ```bash
 nano frontend-service.yml
