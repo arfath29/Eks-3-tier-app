@@ -22,9 +22,7 @@ cd Eks-3-tier-app
 ```bash
 nano Dockerfile
 ```
-```bash
-dockerfile
-Copy code
+```docker
 FROM node:14
 WORKDIR /app
 COPY package*.json ./
