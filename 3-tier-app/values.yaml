@@ -1,0 +1,28 @@
+# Global namespace for all resources
+namespace: workshop
+
+# Service configurations
+api:
+  replicaCount: 2
+
+frontend:
+  replicaCount: 1
+
+mongodb:
+  replicaCount: 1
+
+# Image configurations
+images:
+  api:
+    repository: arfath29/3-tier-app-backend
+    imagePullPolicy: IfNotPresent
+
+  frontend:
+    repository: arfath29/3-tier-app-frontend
+    imagePullPolicy: IfNotPresent
+
+  mongodb:
+    repository: mongo
+    tag: "4.4.6"
+    imagePullPolicy: IfNotPresent
+
