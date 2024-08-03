@@ -9,6 +9,6 @@ entries:
     name: 3-tier-app
     type: application
     urls:
-    - https://github.com/arfath29/Eks-3-tier-app/Helm/3-tier-app-0.1.0.tgz
+    - https://github.com/arfath29/Eks-3-tier-app/Helm/3-tier-app/3-tier-app-0.1.0.tgz
     version: 0.1.0
 generated: "2024-08-01T19:27:57.623040791+05:30"
