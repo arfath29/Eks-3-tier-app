@@ -3,12 +3,12 @@ entries:
   3-tier-app:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-08-01T19:27:57.623464345+05:30"
+    created: "2024-08-04T20:32:09.05339367+05:30"
     description: A Helm chart for Kubernetes
-    digest: f3bda59be3e8697ddcbdb17cf1e35ba8a776449b31bf13809c37693a896ce577
+    digest: 89d799017ecefa64499bd5fb0c67a5f1def9db49dbdf85f86eaf7ea48dec686e
     name: 3-tier-app
     type: application
     urls:
-    - https://github.com/arfath29/Eks-3-tier-app/Helm/3-tier-app/3-tier-app-0.1.0.tgz
+    - https://arfath29.github.io/Eks-3-tier-app/3-tier-app-0.1.0.tgz
     version: 0.1.0
-generated: "2024-08-01T19:27:57.623040791+05:30"
+generated: "2024-08-04T20:32:09.053080542+05:30"
