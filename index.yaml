@@ -9,6 +9,6 @@ entries:
     name: 3-tier-app
     type: application
     urls:
-    - https://arfath29.github.io/Eks-3-tier-app/3-tier-app-0.1.0.tgz
+    - 3-tier-app/3-tier-app-0.1.0.tgz
     version: 0.1.0
 generated: "2024-08-04T20:32:09.053080542+05:30"
