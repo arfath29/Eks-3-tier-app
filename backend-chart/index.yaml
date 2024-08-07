@@ -9,6 +9,6 @@ entries:
     name: backend-chart
     type: application
     urls:
-    - https://arfath29.github.io/Eks-3-tier-app/backend-chart/backend-chart-0.1.0.tgz
+    - backend-chart/backend-chart-0.1.0.tgz
     version: 0.1.0
 generated: "2024-08-05T19:22:38.901589698+05:30"
