@@ -9,6 +9,6 @@ entries:
     name: mongodb-chart
     type: application
     urls:
-    - mongodb-chart/mongodb-chart-0.1.0.tgz
+    - https://arfath29.github.io/Eks-3-tier-app/mongodb-chart/database-chart-0.1.0.tgz
     version: 0.1.0
 generated: "2024-08-05T19:23:29.860219202+05:30"
