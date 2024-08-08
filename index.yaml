@@ -14,4 +14,4 @@ entries:
     - version: 0.1.0
       appVersion: "1.0"
       urls:
-        - https://arfath29.github.io/Eks-3-tier-app/mongodb-chart/database-chart-0.1.0.tgz
+        - https://arfath29.github.io/Eks-3-tier-app/mongodb-chart/mongodb-chart-0.1.0.tgz
