@@ -8,13 +8,13 @@ entries:
         - https://arfath29.github.io/Eks-3-tier-app/backend-chart/backend-chart-0.1.0.tgz
   frontend-chart:
     - name: frontend-chart
-      version: 0.0.1
+      version: 0.1.0
       appVersion: "0.0"
       urls:
-        - https://arfath29.github.io/Eks-3-tier-app/frontend-chart/frontend-chart-0.0.1.tgz
+        - https://arfath29.github.io/Eks-3-tier-app/frontend-chart/frontend-chart-0.1.0.tgz
   mongodb-chart:
     - name: mongodb-chart
-      version: 0.0.1
+      version: 0.1.0
       appVersion: "0.0"
       urls:
-        - https://arfath29.github.io/Eks-3-tier-app/mongodb-chart/mongodb-chart-0.0.1.tgz
+        - https://arfath29.github.io/Eks-3-tier-app/mongodb-chart/mongodb-chart-0.1.0.tgz
