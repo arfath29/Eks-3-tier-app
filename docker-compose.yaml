@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./Eks-3-tier-app/Application-Code/backend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./Eks-3-tier-app/Application-Code/backend:/usr/src/app
+    command: ["node", "index.js"]
+
+  frontend:
+    build:
+      context: ./Eks-3-tier-app/Application-Code/frontend
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./Eks-3-tier-app/Application-Code/frontend:/usr/src/app
+    command: ["npm", "start"]
+
